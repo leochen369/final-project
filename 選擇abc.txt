@@ -1,0 +1,27 @@
+                printf("這是一個猜拳得小遊戲，請你選擇：\n");
+		printf("A:剪刀\nB:石頭\nC:布\nD:不玩了\n");
+		scanf_s("%c", &gamer);
+		switch (gamer) {
+		case 65:  //A
+		case 97:  //a
+			gamer = 4;
+			break;
+		case 66:  //B
+		case 98:  //b
+			gamer = 7;
+			break;
+		case 67:  //C
+		case 99:  //c
+			gamer = 10;
+			break;
+		case 68:  //D
+		case 100:  //d
+			return 0;
+
+		default:
+			printf("你的選擇為 %c 選擇錯誤,退出...\n", gamer);
+			getchar();
+			system("cls"); // 清屏
+			return 0;
+			break;
+		}
